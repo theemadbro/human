@@ -15,12 +15,21 @@ namespace human
             Beefboi.attack(idea);
             Wizard Merazmus = new Wizard("Merazmus");
             Merazmus.heal();
-            Wizard Abazrafel = new Wizard ("Abazrafel", 2, 2, 2, 40);
-            Abazrafel.fireball(Merazmus);
-            Merazmus.fireball(Abazrafel);
-            Merazmus.fireball(Abazrafel);
+            Wizard otherwiz = new Wizard ("otherwiz", 2, 2, 2, 40);
+            otherwiz.fireball(Merazmus);
+            Merazmus.fireball(otherwiz);
+            Merazmus.fireball(otherwiz);
             Ninja Kubo = new Ninja("Kubo");
             Kubo.steal(Merazmus);
+            Beefboi.attack(Kubo);
+            Kubo.steal(Beefboi);
+            Samurai sam1 = new Samurai("Hamurai");
+            Samurai sam2 = new Samurai("Sam-I-Amurai", 3, 3, 3, 60);
+            Samurai.how_many();
+            sam1.death_blow(sam2);
+            Merazmus.fireball(sam1);
+            sam1.death_blow(sam2);
+            sam1.meditate();
         }
     }
 }
